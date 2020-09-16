@@ -2,6 +2,7 @@ function main() {
   if (document.querySelector('h1.hello-world')) {
     document.querySelector('h1.hello-world').textContent = 'Hello, World!'
   }
+  // Query Selectors
   // Team 1 input querySelctor
   const teamOneNameInput = document.querySelector('.team1 input')
   console.log(teamOneNameInput)
@@ -26,6 +27,10 @@ function main() {
     const teamNameElement = document.querySelector('.team2 h2')
     teamNameElement.textContent = inputFieldValue
   }
+
+  // Event Listeners
+  teamOneNameInput.addEventListener('input', handleChangeTeamOneName)
+  teamTwoNameInput.addEventListener('input', handleChangeTeamTwoName)
 }
 
 document.addEventListener('DOMContentLoaded', main)
