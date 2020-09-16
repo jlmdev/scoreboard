@@ -5,18 +5,19 @@ function main() {
   // Query Selectors
   // Team 1 input querySelctor
   const teamOneNameInput = document.querySelector('.team1 input')
-  // console.log(teamOneNameInput)
+
   // Team 2 input querySelector
   const teamTwoNameInput = document.querySelector('.team2 input')
-  // console.log(teamTwoNameInput)
+
   // Team 1 plus icon querySelector
   const teamOnePlusIcon = document.querySelector('.team1 .add')
-  // console.log(teamOnePlusIcon)
+
   // Team 2 plus icon querySelector
   const teamTwoPlusIcon = document.querySelector('.team2 .add')
+
   // Team 1 minus icon querySelector
   const teamOneMinusIcon = document.querySelector('.team1 .subtract')
-  // console.log(teamOneMinusIcon)
+
   // Team 2 minus icon querySelector
   const teamTwoMinusIcon = document.querySelector('.team2 .subtract')
 
