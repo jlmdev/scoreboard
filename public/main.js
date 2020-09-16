@@ -12,7 +12,10 @@ function main() {
   // Team 1 plus icon querySelector
   const teamOnePlusIcon = document.querySelector('.team1 .add')
   // console.log(teamOnePlusIcon)
-  // teamOneNameInput.value = 'Anything Else I Want'
+  // Team 2 plus icon querySelector
+  const teamTwoPlusIcon = document.querySelector('.team2 .add')
+
+  // variables
   let teamOneScore = 0
   let teamTwoScore = 0
 
@@ -40,10 +43,19 @@ function main() {
     teamOneScoreString.textContent = teamOneScore.toString()
   }
 
+  // Team 2 Plus Icon click event handler
+  const handleTeamTwoPlusClick = event => {
+    const target = event.target
+    const teamTwoScoreString = document.querySelector('.team2 h3')
+    teamTwoScore += 1
+    teamTwoScoreString.textContent = teamTwoScore.toString()
+  }
+
   // Event Listeners
   teamOneNameInput.addEventListener('input', handleChangeTeamOneName)
   teamTwoNameInput.addEventListener('input', handleChangeTeamTwoName)
   teamOnePlusIcon.addEventListener('click', handleTeamOnePlusClick)
+  teamTwoPlusIcon.addEventListener('click', handleTeamTwoPlusClick)
 }
 
 document.addEventListener('DOMContentLoaded', main)
