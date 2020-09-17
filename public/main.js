@@ -24,53 +24,71 @@ function main() {
   // variables
   let teamOneScore = 0
   let teamTwoScore = 0
+  let teamOneName = 'Team One'
+  let teamTwoName = 'Team Two'
 
   // Team 1 name change event handler
   const handleChangeTeamOneName = event => {
     const elementThatChanged = event.target
-    const inputFieldValue = elementThatChanged.value
-    const teamNameElement = document.querySelector('.team1 h2')
-    teamNameElement.textContent = inputFieldValue
+    const inputFieldOneValue = elementThatChanged.value
+    const teamOneNameElement = document.querySelector('.team1 h2')
+    teamOneNameElement.textContent = inputFieldOneValue
+    teamOneName = teamOneNameElement.textContent
   }
 
   // Team 2 name change event handler
   const handleChangeTeamTwoName = event => {
     const elementThatChanged = event.target
-    const inputFieldValue = elementThatChanged.value
-    const teamNameElement = document.querySelector('.team2 h2')
-    teamNameElement.textContent = inputFieldValue
+    const inputFieldTwoValue = elementThatChanged.value
+    const teamTwoNameElement = document.querySelector('.team2 h2')
+    teamTwoNameElement.textContent = inputFieldTwoValue
+    teamTwoName = teamTwoNameElement.textContent
   }
 
   // Team 1 Plus Icon click event handler
   const handleTeamOnePlusClick = event => {
-    const target = event.target
+    // const target = event.target
     const teamOneScoreString = document.querySelector('.team1 h3')
-    teamOneScore += 1
-    teamOneScoreString.textContent = teamOneScore.toString()
+    if (teamOneScore < 21) {
+      teamOneScore += 1
+      teamOneScoreString.textContent = teamOneScore.toString()
+    }
+    if (teamOneScore === 21) {
+      console.log(`${teamOneName} Wins!!!`)
+    }
   }
 
   // Team 2 Plus Icon click event handler
   const handleTeamTwoPlusClick = event => {
-    const target = event.target
+    // const target = event.target
     const teamTwoScoreString = document.querySelector('.team2 h3')
-    teamTwoScore += 1
-    teamTwoScoreString.textContent = teamTwoScore.toString()
+    if (teamTwoScore < 21) {
+      teamTwoScore += 1
+      teamTwoScoreString.textContent = teamTwoScore.toString()
+    }
+    if (teamTwoScore === 21) {
+      console.log(`${teamTwoName} Wins!!!`)
+    }
   }
 
   // Team 1 Minus Icon click event handler
   const handleTeamOneMinusClick = event => {
-    const target = event.target
+    // const target = event.target
     const teamOneScoreString = document.querySelector('.team1 h3')
-    teamOneScore -= 1
-    teamOneScoreString.textContent = teamOneScore.toString()
+    if (teamOneScore > 0) {
+      teamOneScore -= 1
+      teamOneScoreString.textContent = teamOneScore.toString()
+    }
   }
 
   // Team 2 Minus Icon click event handler
   const handleTeamTwoMinusClick = event => {
-    const target = event.target
+    // const target = event.target
     const teamTwoScoreString = document.querySelector('.team2 h3')
-    teamTwoScore -= 1
-    teamTwoScoreString.textContent = teamTwoScore.toString()
+    if (teamTwoScore > 0) {
+      teamTwoScore -= 1
+      teamTwoScoreString.textContent = teamTwoScore.toString()
+    }
   }
 
   // Event Listeners
