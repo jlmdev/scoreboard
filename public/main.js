@@ -53,14 +53,12 @@ function main() {
 
   // Team 1 Plus Icon click event handler
   const handleTeamOnePlusClick = event => {
-    // const target = event.target
     const teamOneScoreString = document.querySelector('.team1 h3')
     if (teamOneScore < 21) {
       teamOneScore += 1
       teamOneScoreString.textContent = teamOneScore.toString()
     }
     if (teamOneScore === 21) {
-      // console.log(`${teamOneName} Wins!!!`)
       winnerNotification.style.display = 'inline'
       winnerNotification.textContent = `${teamOneName} Wins!!!`
     }
@@ -68,14 +66,12 @@ function main() {
 
   // Team 2 Plus Icon click event handler
   const handleTeamTwoPlusClick = event => {
-    // const target = event.target
     const teamTwoScoreString = document.querySelector('.team2 h3')
     if (teamTwoScore < 21) {
       teamTwoScore += 1
       teamTwoScoreString.textContent = teamTwoScore.toString()
     }
     if (teamTwoScore === 21) {
-      // console.log(`${teamTwoName} Wins!!!`)
       winnerNotification.style.display = 'inline'
       winnerNotification.textContent = `${teamTwoName} Wins!!!`
     }
@@ -83,7 +79,6 @@ function main() {
 
   // Team 1 Minus Icon click event handler
   const handleTeamOneMinusClick = event => {
-    // const target = event.target
     const teamOneScoreString = document.querySelector('.team1 h3')
     if (teamOneScore > 0) {
       teamOneScore -= 1
@@ -93,7 +88,6 @@ function main() {
 
   // Team 2 Minus Icon click event handler
   const handleTeamTwoMinusClick = event => {
-    // const target = event.target
     const teamTwoScoreString = document.querySelector('.team2 h3')
     if (teamTwoScore > 0) {
       teamTwoScore -= 1
