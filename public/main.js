@@ -3,7 +3,7 @@ function main() {
     document.querySelector('h1.hello-world').textContent = 'Hello, World!'
   }
   // Query Selectors
-  // Team 1 input querySelctor
+  // Team 1 input querySelector
   const teamOneNameInput = document.querySelector('.team1 input')
 
   // Team 2 input querySelector
@@ -23,6 +23,9 @@ function main() {
 
   // Reset button querySelector
   const resetButton = document.querySelector('.reset')
+
+  // Winner display querySelector
+  const winnerNotification = document.querySelector('h4')
 
   // variables
   let teamOneScore = 0
@@ -57,7 +60,9 @@ function main() {
       teamOneScoreString.textContent = teamOneScore.toString()
     }
     if (teamOneScore === 21) {
-      console.log(`${teamOneName} Wins!!!`)
+      // console.log(`${teamOneName} Wins!!!`)
+      winnerNotification.style.display = 'inline'
+      winnerNotification.textContent = `${teamOneName} Wins!!!`
     }
   }
 
@@ -70,7 +75,9 @@ function main() {
       teamTwoScoreString.textContent = teamTwoScore.toString()
     }
     if (teamTwoScore === 21) {
-      console.log(`${teamTwoName} Wins!!!`)
+      // console.log(`${teamTwoName} Wins!!!`)
+      winnerNotification.style.display = 'inline'
+      winnerNotification.textContent = `${teamTwoName} Wins!!!`
     }
   }
 
@@ -102,6 +109,8 @@ function main() {
     teamTwoScore = 0
     teamOneScoreString.textContent = teamOneScore.toString()
     teamTwoScoreString.textContent = teamTwoScore.toString()
+    winnerNotification.style.display = 'hidden'
+    winnerNotification.textContent = ''
   }
 
   // Event Listeners
