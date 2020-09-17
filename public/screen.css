@@ -35,7 +35,8 @@ section {
   align-items: center;
 }
 
-section h2, section p {
+section h2,
+section p {
   text-align: center;
 }
 
@@ -65,4 +66,19 @@ fieldset i.add {
 
 fieldset i.subtract {
   color: #f64545;
+}
+
+.reset {
+  background-color: rgb(0, 128, 6);
+  height: 2rem;
+  width: 5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.button-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
 }

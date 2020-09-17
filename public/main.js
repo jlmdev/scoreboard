@@ -21,6 +21,9 @@ function main() {
   // Team 2 minus icon querySelector
   const teamTwoMinusIcon = document.querySelector('.team2 .subtract')
 
+  // Reset button querySelector
+  const resetButton = document.querySelector('.reset')
+
   // variables
   let teamOneScore = 0
   let teamTwoScore = 0
@@ -91,6 +94,16 @@ function main() {
     }
   }
 
+  // Reset button click event handler
+  const handleResetButtonClick = event => {
+    const teamOneScoreString = document.querySelector('.team1 h3')
+    const teamTwoScoreString = document.querySelector('.team2 h3')
+    teamOneScore = 0
+    teamTwoScore = 0
+    teamOneScoreString.textContent = teamOneScore.toString()
+    teamTwoScoreString.textContent = teamTwoScore.toString()
+  }
+
   // Event Listeners
   teamOneNameInput.addEventListener('input', handleChangeTeamOneName)
   teamTwoNameInput.addEventListener('input', handleChangeTeamTwoName)
@@ -98,6 +111,7 @@ function main() {
   teamTwoPlusIcon.addEventListener('click', handleTeamTwoPlusClick)
   teamOneMinusIcon.addEventListener('click', handleTeamOneMinusClick)
   teamTwoMinusIcon.addEventListener('click', handleTeamTwoMinusClick)
+  resetButton.addEventListener('click', handleResetButtonClick)
 }
 
 document.addEventListener('DOMContentLoaded', main)
